@@ -23,13 +23,16 @@ public class Trampler implements Listener
 		
 		if ( ! player.isSneaking() )
 		{
-			Location to = event.getTo();
-			Location blockLoc = to; blockLoc.setY(to.getY() - 1);
-			Block block = blockLoc.getBlock();
-	
-			if (block.getTypeId() == 60) // If the block under the moved player is farmland
+			if ( ! player.isFlying() )
 			{
-				block.setTypeId(3); // Make it dirt
+				Location to = event.getTo();
+				Location blockLoc = to; blockLoc.setY(to.getY() - 1);
+				Block block = blockLoc.getBlock();
+	
+				if (block.getTypeId() == 60) // If the block under the moved player is farmland
+				{
+					block.setTypeId(3); // Make it dirt
+				}
 			}
 		}
 	}
