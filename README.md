@@ -1,0 +1,1 @@
+This plugin makes trampling just like before Minecraft 1.1. Walking (or jumping) without sneaking is enough to trample your farmland/crops.
